@@ -43,8 +43,8 @@ public class Journal
     }
     public void LoadFromFile(string file)
     {
-            string filename = file;
-            string[] lines = System.IO.File.ReadAllLines(filename);
+            string fileName = file;
+            string[] lines = System.IO.File.ReadAllLines(fileName);
 
             foreach (string line in lines)
             {
