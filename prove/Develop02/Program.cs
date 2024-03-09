@@ -1,3 +1,7 @@
+// I noticed that the program would delete previous entries if I wrote one and then saved without loading first.
+// A user would loss all their journal entries, so I created a checker that would load previous entries if the user forgot to before saving.
+// I then added a delete function through the option menu to delete your entries if that what you really want to do.
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -43,7 +47,7 @@ class Program
             anEntry._date = theCurrentTime.ToShortDateString();
             string prompt = promptList.GetRandomPrompt();
             Console.WriteLine($"\n{prompt}");
-            Console.Write(">");
+            Console.Write("> ");
             anEntry._entryText = Console.ReadLine();
             anEntry._promptText = prompt;
             theJournal.AddEntry(anEntry);
@@ -73,12 +77,12 @@ class Program
 
         else if (selection == 6)
         {
-            Console.WriteLine("Thank you for writing in your journal today.");
+            Console.WriteLine("\nThank you for writing in your journal today.\n");
         }
 
         else
         {
-            Console.WriteLine("Sorry, that is not a valid selection.");
+            Console.WriteLine("\nSorry, that is not a valid selection.\n");
         }
 
         }
