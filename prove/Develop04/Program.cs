@@ -33,6 +33,11 @@ class Program
                 listingActivity.Run();
             }
 
+            if (userSelection == 4)
+            {
+                Console.Write("\nThank you for using the Mindfulness Program!");
+            }
+
             else
             {
                 Console.WriteLine("\nInvalid selection, please select option 1 - 4 to continue.");

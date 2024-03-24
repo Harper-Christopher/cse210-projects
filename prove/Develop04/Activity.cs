@@ -62,7 +62,7 @@ public class Activity
 
     public void DisplayProgramsCompleted()
     {
-        Console.WriteLine($"\nThank you for using the Mindfulness Program! You have completed {_breathingCompleted} breathing activite(s), {_reflectingCompleted} reflecting activite(s), and {_listingCompleted} listing activitie(s) during this session.");
+        Console.WriteLine($"\nYou have completed {_breathingCompleted} breathing activite(s), {_reflectingCompleted} reflecting activite(s), and {_listingCompleted} listing activitie(s) during this session.\n");
     }
     
     public void DisplayStartingMessage() 
