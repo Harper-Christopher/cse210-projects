@@ -5,7 +5,7 @@ using System.Reflection;
 public class GoalManager
 {
     private List<Goal> _goals;
-    public int _score;
+    private int _score;
     private string[] _txtFiles;
 
     public GoalManager()
@@ -101,6 +101,11 @@ public class GoalManager
                 Console.WriteLine($"{i + 1}. {completionStatus} {_goals[i].GetDetailsString()}");
             }
         }
+    }
+
+    public int GetScore()
+    {
+        return _score;
     }
 
     void CreateGoal()
