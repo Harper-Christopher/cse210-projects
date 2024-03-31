@@ -29,7 +29,8 @@ public class ChecklistGoal : Goal
             pointsEarned = _points;
         }
         GoalManager goalManager = new GoalManager();
-        goalManager._score += pointsEarned;
+        int currentScore = goalManager.GetScore();
+        currentScore += pointsEarned;
     }
 
     public override bool IsComplete()
